@@ -140,3 +140,24 @@ footer li {
     padding: 0px;
   }
 }
+
+
+                  /*------------FOOTER----------*/
+footer{
+  padding: 30px 0px;
+}
+footer .fam-opens{
+  color: #dedec5;
+}
+footer a{
+  color: #fff;
+  justify-content: space-between;
+  padding: 3px;
+  }
+  footer a:hover{
+    color: #dedec5;
+    text-decoration-line: none;
+  }
+#legal hr{
+  margin-top: 5px;
+}
