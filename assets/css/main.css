@@ -144,12 +144,18 @@ footer li {
 
 /*CSS Información*/
 
+#informacion {
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+
 .parrafo {
     font-size: 22px;
     font-weight: lighter;
-    padding-right: 26px;
+    padding-right: 30px;
   }
 
 .pad-30 {
-  padding: 18px;
-  }
+      padding: 18px;
+    }
+
