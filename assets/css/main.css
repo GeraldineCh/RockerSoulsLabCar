@@ -140,7 +140,7 @@ footer li {
     padding: 0px;
   }
 }
-/** aqui **/
+
 .pad-navbar {
   padding: 28px;
 }
@@ -150,3 +150,32 @@ footer li {
     padding: 0;
   }
 }
+
+/*Hero Modify*/
+#hero {
+  background-image: url(../img/taxi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 92%;
+  width: 100%;
+  height: 92vh;
+}
+
+.mar-top-5{
+  margin-top: 5%;
+}
+
+.line-separator{
+  color: #fff;
+  display: table;
+}
+
+.line-separator:before,.line-separator:after{
+  border-top: 1px solid #fff;
+  top: 10px;
+  content: '';
+  display: table-cell;
+  position: relative;
+  width: 35%;
+}
+>>>>>>> 43a3c9fee88da00285b76d4d6b2f3ab7c4370ef1
