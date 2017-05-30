@@ -157,10 +157,24 @@ footer li {
   padding:0 8% 0 8%;
 }
 
-#hero input{
+#hero hr{
   width: 35%;
 }
 
 .mar-top-5{
   margin-top: 5%;
+}
+
+.line-separator{
+  color: #fff;
+  display: table;
+}
+
+.line-separator:before,.line-separator:after{
+  border-top: 1px solid #fff;
+  top: 10px;
+  content: '';
+  display: table-cell;
+  position: relative;
+  width: 35%;
 }
