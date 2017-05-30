@@ -76,6 +76,7 @@
 }
 #partida, #llegada {
   background-color: transparent;
+  border: 1px solid white;
   box-shadow: none;
   color: inherit;
 }
@@ -139,6 +140,9 @@ footer li {
   .apps-small img {
     padding: 0px;
   }
+  .navbar-text{
+    float: none;
+  }
 }
 
 .pv5{
@@ -150,4 +154,7 @@ footer li {
   color: black;
   font-weight: 700;
   visibility: hidden;
+}
+.p-top15{
+  padding-top: 15px;
 }
