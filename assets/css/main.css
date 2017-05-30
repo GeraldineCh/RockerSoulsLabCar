@@ -140,3 +140,13 @@ footer li {
     padding: 0px;
   }
 }
+/** aqui **/
+.pad-navbar {
+  padding: 28px;
+}
+
+@media (min-width: 768px) {
+  .pad-navbar {
+    padding: 0;
+  }
+}
