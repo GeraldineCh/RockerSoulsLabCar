@@ -1,6 +1,6 @@
-# LabCar
+# LAB-CAR
 
-*** Se realizó como proyecto final del Sprint 4 ***
+**PROYECTO FINAL SPRINT 4 Laboratoria Bootcamp**
 
 
 ## Framework utilizado:
@@ -12,7 +12,7 @@
 `Google maps`
 
 ## Desarrollo
-# LAB-CAR
+## Sobre el Proyecto
 - Labcar es una empresa de Taxis que te permite pedir un taxi cuando quieras y en donde quieras.
 - Tenemos una gran cantidad de conductores por todo el departamento.
 
@@ -23,13 +23,7 @@
 - Lleva incluido un mapa para indicar la ubicación del usuario, por lo que se usará la API de Google Maps
 - La hora de entrega del Proyecto será a las 19:00.
 
--La composición de la página es la que sigue:
-  - Navbar
-  - hero
-   - Información
-   - Conduce
-   - Tarifa
-   - footer
+La composición de la página es la que sigue:
 
   ### Navbar:
   - En esta sección encontraremos el logo y un menú corto de 3 opciones( Viaja, Conduce, Inicia Sesión).
@@ -58,18 +52,14 @@
 
 
 ### Mobile
-
 Se realizó la página responsive, iniciando por modo mobile, debido a que el framework es mobile.
-Se decidió realizar cada zona respectiva con mobile y desktop.
 
 ### Desktop
-
-Luego de concluir con la parte mobile de cada sección, se continuó con la estructura desktop, algunos detalles se dejaron para el final.
+Luego de concluir con la parte mobile de cada sección, se continuó con la estructura desktop.
 
 ### Google Maps
-
-También se solicitó pedir ubicación del google maps. Reto completado
-Se pudo concluir hasta el autocompletado.
+Se solicitó, como versión básica, pedir y marcar la ubicación del dispositivo mediante el API de Google Maps.
+Como un adicional se generó el trazado de ruta con el cálculo de tarifa correspondiente.
 
 ##  Créditos
- ### Squad Rocker Souls 
+ ### Squad Rocker Souls
