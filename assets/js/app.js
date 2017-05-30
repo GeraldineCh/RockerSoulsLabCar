@@ -4,50 +4,70 @@ function initMap() {
     zoom: 18,
     center: centro,
   });
-  var infoWindow = new google.maps.InfoWindow({map: map});
 
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      };
+  var latitud, longitud, miUbicacion;
+  var funcionExito = function(posicion) {
+    latitud = posicion.coords.latitude;
+    longitud = posicion.coords.longitude;
 
-      map.setCenter(pos);
-
-      var marker = new google.maps.Marker({
-        position: pos,
-        map: map
-      });
-
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
+    miUbicacion = new google.maps.Marker({
+      position: { lat: latitud, lng: longitud},
+      map: map
     });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
+
+    map.setZoom(18);
+    map.setCenter({lat: latitud, lng: longitud});
   }
 
-  new AutocompleteDirectionsHandler(map);
-}
+  var funcionError = function(error) {
+    alert("Tenemos un problema con encontrar tu ubicación");
+  }
+
+  
+    if (navigator.geolocation) { // devuelve un objeto geolocation q proporciona acceso web a la ubicacion de un dispositivo.
+      navigator.geolocation.getCurrentPosition(funcionExito, funcionError); //recibe 3 parametros: exito de la funcion, error de la funcion, opcions de posicion
+    }
 
 
-function AutocompleteDirectionsHandler(map) {
-  this.map = map;
-  this.originPlaceId = null;
-  this.destinationPlaceId = null;
-  this.travelMode = 'DRIVING';
-  var originInput = document.getElementById('partida');
-  var destinationInput = document.getElementById('llegada');
-  //var modeSelector = document.getElementById('mode-selector');
-  this.directionsService = new google.maps.DirectionsService;
-  this.directionsDisplay = new google.maps.DirectionsRenderer;
-  this.directionsDisplay.setMap(map);
 
-  var originAutocomplete = new google.maps.places.Autocomplete(
-      originInput, {placeIdOnly: true});
-  var destinationAutocomplete = new google.maps.places.Autocomplete(
-      destinationInput, {placeIdOnly: true});
+  var inputPartida = document.getElementById("partida");
+  var inputDestino = document.getElementById("llegada");
+  new google.maps.places.Autocomplete(inputPartida);
+  new google.maps.places.Autocomplete(inputDestino);
 
-}
+  var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+
+  var calculateAndDisplayRoute = function(directionsService, directionsDisplay){
+    directionsService.route({
+      origin: inputPartida.value,
+      destination: inputDestino.value,
+      travelMode: 'DRIVING'
+    },
+    function(response, status){
+      if(status === 'OK') {
+        var distancia = Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
+        var costo = document.getElementById("costo");
+        costo.classList.remove("hide");
+
+        var costo = distancia*1.75;
+        if (costo<4) {
+          costo.innerHTML= "S/. 4";
+        } else {
+        costo.innerHTML = "S/. " + parseInt(costo);}
+        directionsDisplay.setDirections(response);
+        miUbicacion.setMap(null);
+      } else {
+        windows.alert("No encontrammos una ruta.");
+      }
+    });
+  }
+
+  directionsDisplay.setMap(map);
+  var trazarRuta = function(){
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  };
+
+  document.getElementById("ruta").addEventListener("click", trazarRuta);
+
+  }
