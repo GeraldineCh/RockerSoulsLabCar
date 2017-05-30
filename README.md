@@ -72,4 +72,4 @@ También se solicitó pedir ubicación del google maps. Reto completado
 Se pudo concluir hasta el autocompletado.
 
 ##  Créditos
- * [RuthSalvador] (https://github.com/RuthSalvador)
+ ### Squad Rocker Souls 
