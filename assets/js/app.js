@@ -1,4 +1,4 @@
-function initMap() {
+/*function initMap() {
   var centro = {lat: -34.397, lng: 150.644};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 18,
@@ -71,3 +71,4 @@ function initMap() {
   document.getElementById("ruta").addEventListener("click", trazarRuta);
 
   }
+*/
