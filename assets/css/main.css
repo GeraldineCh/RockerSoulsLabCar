@@ -140,3 +140,16 @@ footer li {
     padding: 0px;
   }
 }
+
+
+/*CSS Información*/
+
+.parrafo {
+    font-size: 22px;
+    font-weight: lighter;
+    padding-right: 26px;
+  }
+
+.pad-30 {
+  padding: 18px;
+  }
