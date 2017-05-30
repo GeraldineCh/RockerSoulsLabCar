@@ -88,7 +88,7 @@
     <section id="tarifa" class="bg-lab fam-opens">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-4 pv5">
             <h3>Tarifas</h3>
             <h4>Consulta las tarifas LabCar aquí</h4>
             <br>
@@ -96,21 +96,22 @@
               <div class="form-group">
                 <label for="partida" class="col-xs-1 control-label">
                   <img src="assets/img/circulo.png" alt="partida"></label>
-                <div class="col-xs-11">
+                <div class="col-xs-10">
                   <input type="text" class="form-control" id="partida" placeholder="Ingrese punto de partida">
                 </div>
               </div>
               <div class="form-group">
                 <label for="llegada" class="col-xs-1 control-label">
                   <img src="assets/img/flecha.png" alt="llegada"></label>
-                <div class="col-xs-11">
+                <div class="col-xs-10">
                   <input type="text" class="form-control" id="llegada" placeholder="Ingrese su destino">
                 </div>
               </div>
               <button type="button" id="ruta" name="button" class="btn btn-default btn-lg navbar-text"><b class="text-uppercase">¡trazar ruta!</b></button>
+              <p id="tarifa-ruta">S/. 18</p>
             </form>
           </div>
-          <div class="col-sm-6 visible-sm visible-md visible-lg">
+          <div class="col-sm-6 col-sm-offset-2 visible-sm visible-md visible-lg">
             <div class="border-map">
               <div id="map"></div>
             </div>

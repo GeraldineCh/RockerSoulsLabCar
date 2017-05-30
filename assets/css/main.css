@@ -127,7 +127,7 @@ footer li {
   }
   .border-map {
     border: 1px solid #ffffff;
-    margin: 15px;
+    margin: 3em 1em;
     padding: 7px;
   }
   .apps-small{
@@ -139,4 +139,15 @@ footer li {
   .apps-small img {
     padding: 0px;
   }
+}
+
+.pv5{
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+#tarifa-ruta{
+  font-size: 2em;
+  color: black;
+  font-weight: 700;
+  visibility: hidden;
 }
