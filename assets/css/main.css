@@ -79,6 +79,7 @@
 }
 #partida, #llegada {
   background-color: transparent;
+  border: 1px solid white;
   box-shadow: none;
   color: inherit;
 }
@@ -127,7 +128,7 @@ footer li {
   }
   .border-map {
     border: 1px solid #ffffff;
-    margin: 15px;
+    margin: 3em 1em;
     padding: 7px;
   }
   .apps-small{
@@ -139,6 +140,14 @@ footer li {
   .apps-small img {
     padding: 0px;
   }
+  .navbar-text{
+    float: none;
+  }
+}
+
+.pv5{
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .pad-navbar {
@@ -203,5 +212,10 @@ footer li {
 .btn-drive{
   display: flex;
   align-self: flex-start;
+}
+
+
+.p-top15{
+  padding-top: 15px;
 }
 
