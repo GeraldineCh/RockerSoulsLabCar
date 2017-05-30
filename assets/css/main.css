@@ -141,6 +141,7 @@ footer li {
   }
 }
 
+
 .pad-navbar {
   padding: 28px;
 }
@@ -178,4 +179,22 @@ footer li {
   position: relative;
   width: 35%;
 }
->>>>>>> 43a3c9fee88da00285b76d4d6b2f3ab7c4370ef1
+
+
+/*CSS Información*/
+
+#informacion {
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+
+.parrafo {
+    font-size: 22px;
+    font-weight: lighter;
+    padding-right: 30px;
+  }
+
+.pad-18 {
+      padding: 18px 0px;
+    }
+
